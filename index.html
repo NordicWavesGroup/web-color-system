@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow, noarchive, nosnippet">
+  <meta name="theme-color" content="#F4F6F7">
+  <title>Nordic Waves Group — Color & Contrast</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;600;700&family=Nunito:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="colors.js" defer></script>
+  <script src="palette.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header wrap">
+    <a class="brand" href="#" aria-label="Nordic Waves Group color palette home"><span>Nordic Waves Group<span class="brand-sub"> / Color system</span></span></a>
+    <nav aria-label="Main navigation"><a href="#palette">Palette</a><a href="#examples">Examples</a><a href="#gradients">Gradients</a><a href="#explorer">Contrast explorer <span aria-hidden="true">↗</span></a></nav>
+  </header>
+  <main id="main" class="wrap">
+    <section class="hero" aria-labelledby="page-title">
+      <div>
+        <p class="eyebrow">NATURE-INSPIRED. ACCESSIBILITY-MINDED.</p>
+        <h1 id="page-title">A calmer palette.<br><em>A clearer message.</em></h1>
+        <p class="intro">Ocean depths, forest greens, and soft open skies.<br class="desktop-break"> Explore Nordic Waves Group’s colors and discover how to pair them for clarity and contrast.</p>
+        <a class="button" href="#examples">Explore accessible combinations <span aria-hidden="true">↓</span></a>
+      </div>
+      <svg class="wave-art" viewBox="0 0 480 340" aria-hidden="true" focusable="false">
+        <defs>
+          <clipPath id="wave-frame"><rect width="480" height="340"/></clipPath>
+        </defs>
+        <g clip-path="url(#wave-frame)">
+          <path fill="#DCE7EE" d="M0 0h480v340H0z"/>
+          <path fill="#A7C3D6" d="M0 105C90 35 145 45 240 100S390 165 480 85V340H0Z"/>
+          <path fill="#6E8FB0" d="M0 160C90 90 160 110 250 165S400 215 480 140V340H0Z"/>
+          <path fill="#3F8A86" d="M0 215C90 145 170 165 260 215S410 265 480 195V340H0Z"/>
+          <path fill="#0F5B56" d="M0 260C95 195 165 210 255 255S405 305 480 245V340H0Z"/>
+          <path fill="#1A3E5D" d="M0 290C95 245 170 265 260 295S405 335 480 290V340H0Z"/>
+        </g>
+      </svg>
+    </section>
+
+    <section id="palette" class="section" aria-labelledby="palette-title">
+      <div class="section-heading"><div><p class="eyebrow">01 / THE FOUNDATION</p><h2 id="palette-title">Six colors. One natural balance.</h2></div><p>Our core palette, taken from the original color guide. Select a color’s hex code to copy it.</p></div>
+      <div id="core-colors" class="swatch-grid"></div>
+      <p class="footnote"><a href="colors.html">View color definitions only <span aria-hidden="true">↗</span></a></p>
+      <details class="supporting">
+        <summary><svg class="expand-chevron" width="12" height="12" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="m6 4 4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Explore tints, interactive colors & accents <span>22 additional colors</span></summary>
+        <div id="support-colors"></div>
+      </details>
+    </section>
+
+    <aside class="contrast-note">
+      <span class="note-symbol" aria-hidden="true">Aa</span>
+      <div><h2>Good color is readable color.</h2><p>Every text/background example below meets WCAG AA for normal text: <strong>at least 4.5:1 contrast.</strong> AAA starts at 7:1. Ratios use the exact hex values, not the pixels in the source image.</p></div>
+      <span class="standard">WCAG 2.2 / AA</span>
+    </aside>
+
+    <section id="examples" class="section" aria-labelledby="examples-title">
+      <div class="section-heading"><div><p class="eyebrow">02 / COLORS IN CONTEXT</p><h2 id="examples-title">Ocean-led. Naturally readable.</h2></div><p>Ocean blues, forest greens, and balanced neutrals. Only combinations that pass for body copy.</p></div>
+      <div id="example-grid" class="example-grid"></div>
+    </section>
+
+    <section id="gradients" class="section" aria-labelledby="gradients-title">
+      <div class="section-heading"><div><p class="eyebrow">03 / A GENTLE SHIFT</p><h2 id="gradients-title">Subtle gradients. Added depth.</h2></div><p>Distinct transitions through ocean, forest, and soft neutrals. Suggested surfaces, with AA-safe text throughout.</p></div>
+      <div id="gradient-grid" class="example-grid"></div>
+      <p class="footnote">Each gradient uses two opaque palette colors with explicit sRGB interpolation. Every RGB channel moves in the same direction, so luminance stays between the endpoints. The minimum contrast shown is the lower endpoint ratio; the suggested text passes AA everywhere along the gradient. Recheck contrast if you change the stops, text color, interpolation, or opacity.</p>
+    </section>
+
+    <section id="explorer" class="section explorer-section" aria-labelledby="explorer-title">
+      <div class="section-heading"><div><p class="eyebrow">04 / FIND YOUR PAIR</p><h2 id="explorer-title">The contrast explorer.</h2></div><p>Choose a background. Find a readable foreground. Non-passing text colors are never offered.</p></div>
+      <div class="explorer">
+        <div class="explorer-controls">
+          <label for="background">Background color</label>
+          <select id="background"></select>
+          <label for="foreground">Text color <span>AA-safe options only</span></label>
+          <select id="foreground"></select>
+          <div class="result" role="status" aria-live="polite" aria-atomic="true"><strong id="ratio"></strong><span id="rating"></span></div>
+          <p class="explorer-hint">Calculated in both directions using WCAG relative luminance. Large-text-only combinations are excluded, so you can use these pairs at any text size.</p>
+        </div>
+        <div id="live-preview" class="live-preview">
+          <p class="eyebrow">A LITTLE LESS NOISE</p>
+          <h3>A brighter future<br>starts with clarity.</h3>
+          <p>Thoughtful colors create room for ideas to grow. This is normal-sized text, using your selected color combination.</p>
+          <div class="preview-footer"><span id="pair-label"></span><span aria-hidden="true">Aa</span></div>
+        </div>
+      </div>
+      <p class="footnote">Not every palette color has a qualifying text partner. Those colors remain useful for decoration, but are excluded from the explorer’s backgrounds. Contrast alone does not guarantee full page accessibility.</p>
+    </section>
+  </main>
+  <footer class="site-footer wrap"><a class="brand" href="#"><span>Nordic Waves Group<span class="brand-sub"> / Color system</span></span></a><p>Calm. Trustworthy. Natural. Forward-looking.</p></footer>
+  <div id="copy-status" class="copy-status" role="status" aria-live="polite"></div>
+</body>
+</html>

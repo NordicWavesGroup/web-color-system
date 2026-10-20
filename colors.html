@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow, noarchive, nosnippet">
+  <meta name="theme-color" content="#F4F6F7">
+  <title>Nordic Waves Group — Color Definitions</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;600;700&family=Nunito:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="wrap definitions-page">
+    <a href="index.html#palette">Back to color & contrast guide</a>
+    <h1>Nordic Waves Group<span>Color definitions</span></h1>
+    <div id="definitions"></div>
+  </main>
+  <script src="colors.js"></script>
+  <script>
+    "use strict";
+    document.querySelector("#definitions").innerHTML = [...new Set(colors.map(color => color.group))]
+      .map((group, index) => `<section class="section" aria-labelledby="group-${index}">
+        <h2 id="group-${index}">${group}</h2>
+        <div class="swatch-grid">${colors.filter(color => color.group === group).map(color => `<article class="color-card" data-group="${color.group}">
+          <div class="color-swatch" style="background-color:${color.hex}" aria-hidden="true"></div>
+          <h3>${color.name}</h3><code class="color-definition-hex">${color.hex}</code>
+        </article>`).join("")}</div>
+      </section>`).join("");
+  </script>
+</body>
+</html>
