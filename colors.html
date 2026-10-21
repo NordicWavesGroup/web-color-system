@@ -23,10 +23,13 @@
     document.querySelector("#definitions").innerHTML = [...new Set(colors.map(color => color.group))]
       .map((group, index) => `<section class="section" aria-labelledby="group-${index}">
         <h2 id="group-${index}">${group}</h2>
-        <div class="swatch-grid">${colors.filter(color => color.group === group).map(color => `<article class="color-card" data-group="${color.group}">
-          <div class="color-swatch" style="background-color:${color.hex}" aria-hidden="true"></div>
-          <h3>${color.name}</h3><code class="color-definition-hex">${color.hex}</code>
-        </article>`).join("")}</div>
+        ${colorRows(group).map(row => `<div class="color-family">${row.name ? `<h3>${row.name}</h3>` : ""}
+        <div class="swatch-grid${row.name ? " tint-grid" : ""}">${row.colors.map(color => `<article class="color-card" data-group="${color.group}">
+          <div class="color-swatch${color.outline ? " color-swatch-outlined" : ""}" style="background-color:${color.hex}" aria-hidden="true"></div>
+          ${row.name ? `<h4>${color.name}</h4>` : `<h3>${color.name}</h3>`}
+          ${color.description ? `<p class="color-description">${color.description}</p>` : ""}
+          <code class="color-definition-hex">${color.hex}</code>
+        </article>`).join("")}</div></div>`).join("")}
       </section>`).join("");
   </script>
 </body>

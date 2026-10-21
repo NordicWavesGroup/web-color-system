@@ -32,9 +32,9 @@
           <clipPath id="wave-frame"><rect width="480" height="340"/></clipPath>
         </defs>
         <g clip-path="url(#wave-frame)">
-          <path fill="#DCE7EE" d="M0 0h480v340H0z"/>
+          <path fill="#DCE7EF" d="M0 0h480v340H0z"/>
           <path fill="#A7C3D6" d="M0 105C90 35 145 45 240 100S390 165 480 85V340H0Z"/>
-          <path fill="#6E8FB0" d="M0 160C90 90 160 110 250 165S400 215 480 140V340H0Z"/>
+          <path fill="#A3B2BE" d="M0 160C90 90 160 110 250 165S400 215 480 140V340H0Z"/>
           <path fill="#3F8A86" d="M0 215C90 145 170 165 260 215S410 265 480 195V340H0Z"/>
           <path fill="#0F5B56" d="M0 260C95 195 165 210 255 255S405 305 480 245V340H0Z"/>
           <path fill="#1A3E5D" d="M0 290C95 245 170 265 260 295S405 335 480 290V340H0Z"/>
@@ -47,7 +47,7 @@
       <div id="core-colors" class="swatch-grid"></div>
       <p class="footnote"><a href="colors.html">View color definitions only <span aria-hidden="true">↗</span></a></p>
       <details class="supporting">
-        <summary><svg class="expand-chevron" width="12" height="12" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="m6 4 4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Explore tints, interactive colors & accents <span>22 additional colors</span></summary>
+        <summary><svg class="expand-chevron" width="12" height="12" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="m6 4 4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Explore supporting colors & usage <span id="support-color-count"></span></summary>
         <div id="support-colors"></div>
       </details>
     </section>
@@ -64,9 +64,9 @@
     </section>
 
     <section id="gradients" class="section" aria-labelledby="gradients-title">
-      <div class="section-heading"><div><p class="eyebrow">03 / A GENTLE SHIFT</p><h2 id="gradients-title">Subtle gradients. Added depth.</h2></div><p>Distinct transitions through ocean, forest, and soft neutrals. Suggested surfaces, with AA-safe text throughout.</p></div>
+      <div class="section-heading"><div><p class="eyebrow">03 / A GENTLE SHIFT</p><h2 id="gradients-title">Subtle gradients. Added depth.</h2></div><p>Start with Deep current or Quiet horizon. Keep the alternatives for occasional supporting sections.</p></div>
       <div id="gradient-grid" class="example-grid"></div>
-      <p class="footnote">Each gradient uses two opaque palette colors with explicit sRGB interpolation. Every RGB channel moves in the same direction, so luminance stays between the endpoints. The minimum contrast shown is the lower endpoint ratio; the suggested text passes AA everywhere along the gradient. Recheck contrast if you change the stops, text color, interpolation, or opacity.</p>
+      <p class="footnote">Minimum contrast is verified across each opaque sRGB gradient. Recheck contrast if you change the stops, text color, interpolation, or opacity.</p>
     </section>
 
     <section id="explorer" class="section explorer-section" aria-labelledby="explorer-title">
@@ -87,10 +87,10 @@
           <div class="preview-footer"><span id="pair-label"></span><span aria-hidden="true">Aa</span></div>
         </div>
       </div>
-      <p class="footnote">Not every palette color has a qualifying text partner. Those colors remain useful for decoration, but are excluded from the explorer’s backgrounds. Contrast alone does not guarantee full page accessibility.</p>
+      <p class="footnote">Status backgrounds, Success, and Info are reserved for status messages and excluded from both dropdowns. Colors without a qualifying text partner are also excluded from background options. Contrast alone does not guarantee full page accessibility.</p>
     </section>
   </main>
-  <footer class="site-footer wrap"><a class="brand" href="#"><span>Nordic Waves Group<span class="brand-sub"> / Color system</span></span></a><p>Calm. Trustworthy. Natural. Forward-looking.</p></footer>
+  <footer class="site-footer wrap"><a class="brand" href="#"><span>Nordic Waves Group<span class="brand-sub"> / Color system</span></span></a></footer>
   <div id="copy-status" class="copy-status" role="status" aria-live="polite"></div>
 </body>
 </html>
